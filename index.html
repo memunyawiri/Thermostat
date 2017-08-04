@@ -6,7 +6,16 @@
   </head>
   <body>
     <section>
-      <h1 id="temperature" class="energyUsage"></h1>
+  <h1>World temperature: <span id="current-temperature">20</span></h1>
+  <select id="current-city">
+    <option value="london">London</option>
+    <option value="newyork">New York</option>
+    <option value="paris">Paris</option>
+    <option value="tokyo">Tokyo</option>
+  </select>
+</section>
+    <section>
+      <h1> Interior Temperature: <span id="temperature"></span></h1>
       <p>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>

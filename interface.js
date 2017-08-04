@@ -21,16 +21,21 @@ $(document).ready(function() {
     thermostat.switchPowerSavingModeOn();
     $('#power-saving').text('on')
     updateTemperature();
-  })
+  });
 
   $('#powersaving-off').click(function() {
     thermostat.switchPowerSavingModeOff();
     $('#power-saving').text('off')
     updateTemperature();
-  })
+  });
 
   function updateTemperature() {
-    $('#temperature').text(thermostat.temperature);
+    $('#temperature').text(thermostat.getCurrentTemperature());
     $('#temperature').attr('class', thermostat.energyUsage());
+  };
+
+  function updateEnergyUsage() {
+    $('#energy-usage').text(thermostat.energyUsage());
+    $('#energy-usage').attr('class', thermostat.energyUsage());
   };
 });
